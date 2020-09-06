@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Jason Jewsikow Home Page</title>
+    <title>Jason Jewsikow PHP Coding</title>
   </head>
   <body>
-
 
 <header>
   <p>ICT301-001 HTML Coding</p>
 </header>
 
 <main>
-
-<body>
 
   <?php
 $first_name = "Jason";
@@ -29,10 +26,7 @@ echo "<p>My name is $first_name $last_name and I am currently a Junior at the $s
 echo "<p>Some of my favorite hobbies include playing/watching any sport, hangouting with my friends, and I am currently learning how to edit using multiple Abobe programs on my own. This website will explain how my past experiences and current interests allow's me to be a qualified canadite for job opportunites.</p>";// Talk about resume and experience;
   ?>
 
-  </body>
 </main>
-
-
 
   </body>
 </html>
