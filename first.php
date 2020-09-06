@@ -12,12 +12,8 @@
 
 <main>
 
-  <header class="header">
-    <h2>Hello!</h2>
-  </header>
-
 <body>
-  
+
   <?php
 $first_name = "Jason";
 $last_name = "Jewsikow";
