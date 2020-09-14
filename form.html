@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jason Jewsikow PHP Coding</title>
+  </head>
+  <body>
+
+<header>
+  <p>ICT301-001 HTML Coding</p>
+</header>
+
+<main>
+
+Name: <input type="text" name="name" value="<?php echo $name;?>">
+
+E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+
+Website: <input type="text" name="website" value="<?php echo $website;?>">
+
+Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+
+Grade Level:
+<input type="radio" name="grade"
+<?php if (isset($grade) && $grade=="freshman") echo "checked";?>
+value="freshman">Freshman
+
+<input type="radio" name="grade"
+<?php if (isset($grade) && $grade=="sophmore") echo "checked";?>
+value="freshman">Sophmore
+
+<input type="radio" name="grade"
+<?php if (isset($grade) && $grade=="junior") echo "checked";?>
+value="junior">Junior
+
+<input type="radio" name="grade"
+<?php if (isset($grade) && $grade=="senior") echo "checked";?>
+value="senior">Senior <br>
+
+<input type="submit">
+
+</main>
+
+  </body>
+</html>
