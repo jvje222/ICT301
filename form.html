@@ -11,34 +11,41 @@
 
 <main>
 
-<form action="welcome.php" method="post">
-Name: <input type="text" name="name" value="<?php echo $name;?>">
+  <h2>PHP Form Example</h2>
+  <p><span class="error">* required field</span></p>
+  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    Name: <input type="text" name="name" value="<?php echo $name;?>">
+    <span class="error">* <?php echo $nameErr;?></span>
+    <br><br>
+    E-mail: <input type="text" name="email" value="<?php echo $email;?>">
+    <span class="error">* <?php echo $emailErr;?></span>
+    <br><br>
+    Website: <input type="text" name="website" value="<?php echo $website;?>">
+    <span class="error"><?php echo $websiteErr;?></span>
+    <br><br>
+    Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
+    <br><br>
+    Gender:
+    <input type="radio" name="gender" <?php if (isset($gender) && $gender=="female") echo "checked";?> value="female">Female
+    <input type="radio" name="gender" <?php if (isset($gender) && $gender=="male") echo "checked";?> value="male">Male
+    <input type="radio" name="gender" <?php if (isset($gender) && $gender=="other") echo "checked";?> value="other">Other
+    <span class="error">* <?php echo $genderErr;?></span>
+    <br><br>
+    <input type="submit" name="submit" value="Submit">
+  </form>
 
-E-mail: <input type="text" name="email" value="<?php echo $email;?>">
-
-Website: <input type="text" name="website" value="<?php echo $website;?>">
-
-Comment: <textarea name="comment" rows="5" cols="40"><?php echo $comment;?></textarea>
-
-Grade Level:
-<input type="radio" name="grade"
-<?php if (isset($grade) && $grade=="freshman") echo "checked";?>
-value="freshman">Freshman
-
-<input type="radio" name="grade"
-<?php if (isset($grade) && $grade=="sophmore") echo "checked";?>
-value="freshman">Sophmore
-
-<input type="radio" name="grade"
-<?php if (isset($grade) && $grade=="junior") echo "checked";?>
-value="junior">Junior
-
-<input type="radio" name="grade"
-<?php if (isset($grade) && $grade=="senior") echo "checked";?>
-value="senior">Senior <br>
-
-<input type="submit">
-</form>
+  <?php
+  echo "<h2>Your Input:</h2>";
+  echo $name;
+  echo "<br>";
+  echo $email;
+  echo "<br>";
+  echo $website;
+  echo "<br>";
+  echo $comment;
+  echo "<br>";
+  echo $gender;
+  ?>
 
 </main>
 
