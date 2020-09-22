@@ -12,7 +12,7 @@
   else
   {echo "<p><ahref=for_loop_form.html>Go back and enter a number.</a></p>";}
 
-  for ($counter=1; $counter <= $num; $counter++){echo "<p>Hello</p><br>";}
+  for ($counter=1; $counter <= $num; $counter++){echo "Hello<br>";}
  ?>
 
   </body>
