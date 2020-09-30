@@ -6,7 +6,7 @@
   <body>
 
     <?php
-    include('includes/header.html');
+    include('header.html');
      ?>
 
 <h2>My Favorite Music</h2>
@@ -21,7 +21,7 @@
   </body>
 
   <?php
-  include('includes/footer.html')
+  include('footer.html');
    ?>
 
 </html>

@@ -6,7 +6,7 @@
   <body>
 
 <?php
-include('includes/header.html');
+include('header.html');
  ?>
 
 <h3>Welcome to my Site!</h3>
@@ -15,7 +15,7 @@ include('includes/header.html');
   </body>
 
 <?php
-include('includes/footer.html')
+include('footer.html');
  ?>
 
 </html>
