@@ -6,16 +6,12 @@
   <body>
 
 <?php
-//Create a Associative Array about favorite Hip-Hop Artists
-$artists = array("Juice WRLD" => "Drake" => "Trippie Red" => "Lil Uzi" => "Lil Skies" => "Post Malone" => "Travis Scott");
 
-//Sort the items by key
-ksort($artists);
+$home = array("Dayton"=>"Ohio", "Springboro"=>"Ohio", "Troy"=>"Ohio", "Colubus"=>"Ohio", "Lexington"=>"Kentucky", "Richmond"=>"Kentucky", "Villa Hills"=>"Kentucky");
 
-//Print out all sorted values for $artists
-echo "My favorite artists include: <br>";
-foreach ($artists as $key => $value) {
-  echo "$value in $key <br>";
+ksort($home);
+foreach($home as $key=>$value) {
+	echo"<p>I have lived near $key in $value</p>";
 }
  ?>
 
