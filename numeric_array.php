@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Assignment #4</title>
-  </head>
-  <body>
+<body>
 
 <?php
-//Create a Numeric Array about favorite Hip-Hop Artists
-$artists = array("Juice WRLD", "Drake","Trippie Red","Lil Uzi","Lil Skies","Post Malone","Travis Scott" => , );
+$artists = array("Juice WRLD", "Drake", "Trippie Red");
 
-//Print out my top three $artists
-echo "The artists I chose to include are: <br>";
-foreach ($artists as $value) {
-  echo "$value <br>";
-}
- ?>
+$artists[0] = "Juice WRLD";
+$artists[1] = "Drake";
+$artists[2] = "Trippie Red";
+$artists[3] = "Lil Uzi Vert";
+$artists[4] = "Lil Skies";
+$artists[5] = "Post Malone";
+$artists[6] = "Travis Scott";
 
-  </body>
+echo "My favorite artists I listen to are: " . $artists[0] . ", " . $artists[2] . ", " . " and " . $artists[4] . ".";
+?>
+
+</body>
 </html>
