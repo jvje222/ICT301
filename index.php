@@ -1,44 +1,19 @@
-<?php
-require_once ('includes/mysqli_connect.php');
-?>
+<html>
+<body>
+<center>
+<table width="700" cellpadding="10">
+<tr><td align="center">
+<a href="index.php">Home<a> |
+<a href="register.php">Register<a> |
+<a href="index.php">Login<a>
+</td></tr>
+</table>
 
-<form action="index.php" method="post">
-  Search: <input name="query" size="50"><input type="submit" value="search">
+<h2>Please Login here to use our services</h2>
+<form action="login.php" method="post">
+  <p>Email Address: <input type="email" name="email" size="20" maxlength="60"> </p>
+  <p>Password: <input type="password" name="pass" size="20" maxlength="20"></p>
+  <p><input type="submit" name="submit" value="Login"></p>
 </form>
-
-<?php
-if (!empty($_POST['query'])) {
-  $query = mysqli_real_escape_string($dvc, $_POST['query']);
-  $query = "SELECT * FROM bookmarks WHERE (title LIKE '%$query') OR (url LIKE '%$query') OR (comments LIKE '%$query')";
-}else {
-  $query="SELECT * FROM bookmarks";
-}
-$results = @mysqli_query ($dbc, $query);
-$num = mysqli_num_rows($results);
-if ($num>0) {
-  echo "<p>$num records are retrieved.</p>";
-  echo "<table border="1" width="80%"> <tr>
-    <td>Title</td>
-    <td>Comments</td>
-    <td>URL</td>
-    <td>Delete</td>
-    <td>Update</td>";
-
-while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-  echo "<tr><td>" . $row['title'] . "</td>";
-  echo "<td>" . $row['comments'] . "</td>"
-  echo "<td><a href=" . $row['url'] . "target=_blank>" . $row['url'] . "</a></td>";
-  echo "<td><a href=deleteconfirm.php?id=" . $row['id'] . ">Delete</a></td>";
-  echo "<td><a href=updateform.php?id=" . $row['id'] . ">Update</a></td></tr>";
-}
-echo "</table>";
-mysqli_free_result($result);
-
-}else {
-  echo "<p>There is no record. </p>";
-}
-echo "<p><a href=index.php>Show all records</a></p>";
-echo "<p><a href=add.php>Add a new record</a></p>";
-
-mysqli_close($dbc);
-?>
+</body>
+</html>
