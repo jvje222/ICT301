@@ -1,5 +1,5 @@
 <?php
-require_once('includes/dbconnect_local.php');
+require_once('includes/db_connect_local.php');
 
 echo "<p>Add a new record</p>";
 
@@ -8,12 +8,12 @@ if(isset($_POST['submitted'])) {
     $comments = mysqli_real_escape_string($dbc, $_POST['comments']);
     $url = mysqli_real_escape_string($dbc, $_POST['url']);
     $query = "INSERT INTO bookmarks (title, url, comments) VALUES ('$title', '$url', '$comments')";
-    $results = @mysqli_query ($dbc, $query);
-    if ($results) {
+    $result = @mysqli_query($dbc, $query);
+    if ($result) {
       echo "<p>A new record has been added.</p>";
       echo "<p><a herf=index.php> Show all records.</a></p>";
     } else {
-        echo "<p>The record could not be added due to a system error." mysqli_error($dbc) ."</p>";
+        echo "<p>The record could not be added due to a system error." . mysqli_error($dbc) . "</p>";
     }
 }
 mysqli_close($dbc)
