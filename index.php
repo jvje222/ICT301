@@ -17,7 +17,7 @@ $results = @mysqli_query ($dbc, $query);
 $num = mysqli_num_rows($results);
 if ($num>0) {
   echo "<p>$num records are retrieved.</p>";
-  echo "<table border="1" width="80%"> <tr>
+  echo "<table border=1 width=80%> <tr>
     <td>Title</td>
     <td>Comments</td>
     <td>URL</td>
