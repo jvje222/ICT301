@@ -1,5 +1,5 @@
 <?php
-require_once('mysqli_connect.php');
+require_once('mysqli_connect_local.php');
 
 echo "<p>Add a new record</p>";
 
