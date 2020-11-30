@@ -12,7 +12,7 @@ if (empty($pass)) {
 }
 
 if (empty($email)) {
-  require_once('includes/mysqli_connect.php');
+  require_once('mysqli_connect_local.php');
   $q = "SELECT * FROM users WHERE email='$email' AND pass=SHA2 ('$pass', 512)";
   $result = @mysquli_qiery($dbc, $q);
   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
