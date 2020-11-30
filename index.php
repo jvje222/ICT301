@@ -13,7 +13,7 @@ if($num > 0) {
       echo "<p>Title: $row[title] <br>";
       echo "Comments: $row[comments] <br>";
       echo "URL: <a href=$row[url] target=_blank>$row[url]</a></p>";
-      echo "<a href=deleteconfirm.php?id=$row[id]Delete</a></p>";
+      echo "<a href=deleteconfirm.php?id=$row[id]>Delete</a></p>";
     }
 } else {
     echo "<p>There is no record</p>";
