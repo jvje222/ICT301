@@ -1,19 +1,19 @@
-<html>
-<body>
-<center>
-<table width="700" cellpadding="10">
-<tr><td align="center">
-<a href="index.php">Home<a> |
-<a href="register.php">Register<a> |
-<a href="index.php">Login<a>
-</td></tr>
-</table>
+<?php
+require_once('includes/mysqli_connect.php');
 
-<h2>Please Login here to use our services</h2>
-<form action="login.php" method="post">
-  <p>Email Address: <input type="email" name="email" size="20" maxlength="60"> </p>
-  <p>Password: <input type="password" name="pass" size="20" maxlength="20"></p>
-  <p><input type="submit" name="submit" value="Login"></p>
-</form>
-</body>
-</html>
+$query = "SELECT * FROM bookmarks";
+$result = @mysqli_query($dbc, $query);
+$num = mysqli_num_rows($result);
+
+if($num > 0) {
+  echo "<p>There are $num records</p>";
+    while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC) ) {
+      echo "<p>Title: $row[title] <br>";
+      echo "Comments: $row[comments] <br>";
+      echo "URL: <a href=$row[url] target=_blank>$row[url]</a></p>";
+    }
+} else {
+    echo "<p>There is no record</p>";
+}
+mysqli_close($dbc);
+?>
