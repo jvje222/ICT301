@@ -1,5 +1,5 @@
 <?php
-require_once('includes/db_connect_local.php');
+require_once('mysqli_connect.php');
 $id = $_GET['id'];
 $query = "DELETE FROM bookmarks WHERE id=$id";
 $result = mysqli_query($dbc, $query)
