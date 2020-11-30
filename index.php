@@ -1,5 +1,5 @@
 <?php
-require_once('includes/mysqli_connect.php');
+require_once('mysqli_connect.php');
 
 $query = "SELECT * FROM bookmarks";
 $result = @mysqli_query($dbc, $query);
