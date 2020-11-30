@@ -1,5 +1,5 @@
 <?php
-require_once('includes/mysqli_connect.php');
+require_once('mysqli_connect_local.php');
 $id = mysqli_real_escape_string($dbc, $_POST['id']);
 $title = mysqli_real_escape_string($dbc, $_POST['title']);
 $comments = mysqli_real_escape_string($dbc, $_POST['comments']);

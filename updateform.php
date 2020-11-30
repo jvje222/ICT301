@@ -1,5 +1,5 @@
 <?php
-require_once('includes/mysqli_connect.php');
+require_once('mysqli_connect_local.php');
 $id = $_GET['id'];
 $query = "SELCET * FROM bookmarks WHERE id=$id";
 $result = mysqli_query($dbc, $query);
